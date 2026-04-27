@@ -11,10 +11,11 @@ import com.example.smartcity.backend.service.UserService;
 @RequestMapping("/api")
 public class AuthController {
 
+	
     @Autowired
     private UserService service;
 
-    @PostMapping("/signup")
+    @PostMapping("/signup")	
     public User signup(@RequestBody User user) {
         return service.signup(user);
     }
